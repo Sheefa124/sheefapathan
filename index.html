@@ -4,25 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Your Role/Title</p>
-    </header>
+    <nav class="navbar">
+        <div class="nav-brand">Your Name</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section id="about">
-        <!-- About you -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm [Your Name]</h1>
+            <p class="lead">A [Your Role] passionate about creating web solutions</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
     </section>
 
-    <section id="projects">
-        <!-- Your projects -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="images/profile/your-photo.jpg" alt="Your Name" class="profile-image">
+            <div class="about-text">
+                <p>Write a compelling introduction about yourself, your background, and what drives you.</p>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <!-- Add more skills -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <!-- Contact information -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <img src="images/projects/project1.jpg" alt="Project 1">
+                <h3>Project Name</h3>
+                <p>Project description goes here. Explain what you built and what technologies you used.</p>
+                <div class="project-links">
+                    <a href="#" class="button">Live Demo</a>
+                    <a href="#" class="button">GitHub</a>
+                </div>
+            </div>
+            <!-- Add more project cards -->
+        </div>
     </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p>Email: your.email@example.com</p>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
