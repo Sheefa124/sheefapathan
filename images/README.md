@@ -1,26 +1,36 @@
- README.md
-# Personal Portfolio Website
+# README.md
+# Creative Portfolio Website
 
-This is my personal portfolio website built with HTML, CSS, and JavaScript. It showcases my projects and skills.
+A modern, animated portfolio website featuring GSAP animations, custom cursor, and interactive elements.
 
 ## Features
+- Custom cursor with trailing effect
+- Glitch text animation
+- Noise canvas background
+- Smooth scroll animations
+- Interactive project cards
+- Animated skill bars
+- Modern contact form
 - Responsive design
-- Project showcase
-- Skills section
-- Contact information
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- GSAP (GreenSock Animation Platform)
+- ScrollTrigger
 
 ## Setup
-1. Clone this repository
-2. Update the content in index.html with your information
-3. Replace images in the images folder
-4. Deploy to GitHub Pages
+1. Clone the repository
+2. Replace content and images
+3. Deploy to GitHub Pages
 
 ## Customization
-- Update colors in css/styles.css
-- Modify layout and styling
-- Add your own projects and skills
-
-## Contact
-[Your Name]
-[Your Email]
-[Your Social Media Links]
+### Colors
+Edit the CSS variables in `:root` to change the color scheme:
+```css
+:root {
+    --primary: #2196f3;
+    --secondary: #f50057;
+    --dark: #1a1a1a;
+    --light: #f5f5f5;

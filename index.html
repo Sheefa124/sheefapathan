@@ -1,84 +1,102 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">Your Name</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="nav-wrapper">
+        <div class="nav-content">
+            <div class="logo" data-scroll>Portfolio</div>
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm [Your Name]</h1>
-            <p class="lead">A [Your Role] passionate about creating web solutions</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="images/profile/your-photo.jpg" alt="Your Name" class="profile-image">
-            <div class="about-text">
-                <p>Write a compelling introduction about yourself, your background, and what drives you.</p>
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <!-- Add more skills -->
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Creative Developer">Creative Developer</h1>
+                <p class="subtitle">Crafting Digital Experiences</p>
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrows">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <canvas id="noise"></canvas>
+        </section>
 
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <img src="images/projects/project1.jpg" alt="Project 1">
-                <h3>Project Name</h3>
-                <p>Project description goes here. Explain what you built and what technologies you used.</p>
-                <div class="project-links">
-                    <a href="#" class="button">Live Demo</a>
-                    <a href="#" class="button">GitHub</a>
+        <section id="work" class="work">
+            <h2 class="section-title">Selected Works</h2>
+            <div class="project-grid">
+                <article class="project-card" data-scroll>
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <h3>Project Name</h3>
+                            <p>Description</p>
+                            <a href="#" class="btn">View Project</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Add more project cards -->
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="skills-container">
+                    <div class="skill" data-scroll>
+                        <div class="skill-title">Frontend</div>
+                        <div class="skill-bar" data-percentage="90"></div>
+                    </div>
+                    <!-- Add more skills -->
                 </div>
             </div>
-            <!-- Add more project cards -->
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <p>Email: your.email@example.com</p>
-                <div class="social-links">
-                    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get in Touch</h2>
+            <form class="contact-form" data-scroll>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Name</label>
+                    <span class="focus-border"></span>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Email</label>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="input-group">
+                    <textarea required></textarea>
+                    <label>Message</label>
+                    <span class="focus-border"></span>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
 
-    <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
